@@ -25,14 +25,14 @@ CustomerID	Unique customer identifier
 Country	Country of the customer
 Tools Used
 
-**SQL (MySQL) **– Data cleaning, transformation, and analysis
+**SQL(MySQL)** – Data cleaning, transformation, and analysis
 
 **Excel** – Data validation and quick summaries
 
 **Tableau / Visualization tools** – Visual exploration of results
 
 **Project Structure**
-'''
+```
 online_retail_sql_project
 │
 ├── 1_Data
@@ -52,7 +52,7 @@ online_retail_sql_project
 │   └── Business_Insights.docx
 │
 └── 5_Dashboard
-'''
+```
 
 **Data Cleaning Steps**
 
