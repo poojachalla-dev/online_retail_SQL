@@ -9,6 +9,8 @@ The dataset contains over 500,000 retail transactions, making it suitable for de
 
 **Source:** Kaggle – Online Retail Dataset
 
+[Download Dataset from Kaggle](https://www.kaggle.com/datasets/lakshmi25npathi/online-retail-dataset)
+
 The dataset contains transactional records from a UK-based online retailer between 2010 and 2011.
 
 **Columns**
@@ -30,6 +32,7 @@ Tools Used
 **Tableau / Visualization tools** – Visual exploration of results
 
 **Project Structure**
+'''
 online_retail_sql_project
 │
 ├── 1_Data
@@ -49,6 +52,7 @@ online_retail_sql_project
 │   └── Business_Insights.docx
 │
 └── 5_Dashboard
+'''
 
 **Data Cleaning Steps**
 
