@@ -28,8 +28,6 @@ Country	Country of the customer
 
 **SQL(MySQL)** – Data cleaning, transformation, and analysis
 
-**Excel** – Data validation and quick summaries
-
 **Tableau / Visualization tools** – Visual exploration of results
 
 **Project Structure**
