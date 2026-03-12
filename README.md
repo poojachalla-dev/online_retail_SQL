@@ -36,7 +36,7 @@ online_retail_sql_project
 │
 ├── 1_Data
 │   ├── online_retail.csv
-│  
+│   ├── online_retail_cleaned.csv
 ├── 2_SQL
 │   ├── 01_create_database_and_table.sql
 │   ├── 02_data_cleaning.sql
