@@ -23,7 +23,8 @@ InvoiceDate	Date and time of purchase
 UnitPrice	Price per unit
 CustomerID	Unique customer identifier
 Country	Country of the customer
-Tools Used
+
+**Tools Used**
 
 **SQL(MySQL)** – Data cleaning, transformation, and analysis
 
@@ -37,14 +38,14 @@ online_retail_sql_project
 │
 ├── 1_Data
 │   ├── online_retail.csv
-│   └── online_retail_cleaned.csv
-│
+│  
 ├── 2_SQL
 │   ├── 01_data_cleaning.sql
 │   ├── 02_sales_analysis.sql
 │   ├── 03_customer_analysis.sql
 │   ├── 04_product_performance.sql
 │   └── 05_advanced_analysis.sql
+    └── README.md
 │
 ├── 3_Visualizations
 │
