@@ -38,11 +38,12 @@ online_retail_sql_project
 │   ├── online_retail.csv
 │  
 ├── 2_SQL
-│   ├── 01_data_cleaning.sql
-│   ├── 02_sales_analysis.sql
-│   ├── 03_customer_analysis.sql
-│   ├── 04_product_performance.sql
-│   └── 05_advanced_analysis.sql
+│   ├── 01_create_database_and_table.sql
+│   ├── 02_data_cleaning.sql
+│   ├── 03_sales_analysis.sql
+│   ├── 04_customer_analysis.sql
+│   ├── 05_product_performance.sql
+│   └── 06_advanced_analysis.sql
     └── README.md
 │
 ├── 3_Visualizations
