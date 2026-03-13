@@ -53,7 +53,7 @@ The dataset contains transaction records from a **UK-based online retailer betwe
 # 📁 Project Structure
 
 ```
-online_retail_sql_project
+online_retail_SQL
 │
 ├── 1_Data
 │   ├── online_retail.csv
