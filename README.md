@@ -36,22 +36,42 @@ online_retail_sql_project
 │
 ├── 1_Data
 │   ├── online_retail.csv
-│   ├── online_retail_cleaned.csv
+│   └── online_retail_cleaned.csv
+│
 ├── 2_SQL
 │   ├── 01_create_database_and_table.sql
 │   ├── 02_data_cleaning.sql
 │   ├── 03_sales_analysis.sql
 │   ├── 04_customer_analysis.sql
 │   ├── 05_product_performance.sql
-│   └── 06_advanced_analysis.sql
-    └── README.md
+│   ├── 06_advanced_analysis.sql
+│   └── README.md
 │
-├── 3_Visualizations
+├── 3_Tableau
+│   ├── revenue_by_country.twb
+│   ├── monthly_revenue_trend.twb
+│   ├── daily_revenue_trend.twb
+│   ├── products_sold_in_most_countries.twb
+│   ├── top_10_products_by_country.twb
+│   ├── total_customers.twb
+│   ├── total_orders.twb
+│   └── total_revenue.twb
 │
-├── 4_Reports
-│   └── Business_Insights.docx
+├── 4_Visualizations
+│   ├── daily_revenue_trend.png
+│   ├── monthly_revenue_trend.png
+│   ├── products_sold_in_most_countries.png
+│   ├── revenue_by_country.png
+│   └── top_10_products_by_country.png
 │
-└── 5_Dashboard
+├── 5_Dashboard
+│   └── dashboard.twb   
+│   └── dashboard.png
+│   └── README.md
+│
+└── 6_Reports
+    └── Business_Insights.docx
+
 ```
 
 **Data Cleaning Steps**
