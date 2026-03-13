@@ -1,36 +1,57 @@
-**E-Commerce Sales Analysis using SQL**
-**Project Overview**
+# 🛒 E-Commerce Sales Analysis using SQL
 
-This project analyzes transactional data from an online retail store to uncover insights about sales performance, customer behavior, and product trends. Using SQL, the dataset was cleaned, transformed, and analyzed to generate actionable business insights that could help an e-commerce company optimize revenue and improve decision-making.
+A data analysis project that explores transactional data from an online retail store to uncover insights about **sales performance, customer behavior, and product trends** using **SQL and Tableau**.
 
-The dataset contains over 500,000 retail transactions, making it suitable for demonstrating real-world data analysis techniques.
+The dataset contains **500,000+ transactions**, making it suitable for demonstrating real-world data cleaning, analysis, and visualization techniques used by data analysts.
 
-**Dataset**
+---
+
+# 📊 Project Overview
+
+This project analyzes historical e-commerce transaction data to answer key business questions such as:
+
+* What are the **monthly sales trends**?
+* Which **products generate the most revenue**?
+* Which **countries contribute the most sales**?
+* Who are the **top customers**?
+* What patterns exist in **customer purchasing behavior**?
+
+The analysis was performed using **SQL for data cleaning and querying** and **Tableau for visualizations and dashboards**.
+
+---
+
+# 📂 Dataset
 
 **Source:** Kaggle – Online Retail Dataset
 
-[Download Dataset from Kaggle](https://www.kaggle.com/datasets/lakshmi25npathi/online-retail-dataset)
+The dataset contains transaction records from a **UK-based online retailer between 2010 and 2011**.
 
-The dataset contains transactional records from a UK-based online retailer between 2010 and 2011.
+### Dataset Features
 
-**Columns**
-**Column	Description**
-InvoiceNo	Unique invoice number for each transaction
-StockCode	Unique product code
-Description	Product description
-Quantity	Number of items purchased
-InvoiceDate	Date and time of purchase
-UnitPrice	Price per unit
-CustomerID	Unique customer identifier
-Country	Country of the customer
+| Column      | Description                                |
+| ----------- | ------------------------------------------ |
+| InvoiceNo   | Unique invoice number for each transaction |
+| StockCode   | Unique product identifier                  |
+| Description | Product description                        |
+| Quantity    | Number of items purchased                  |
+| InvoiceDate | Date and time of purchase                  |
+| UnitPrice   | Price per unit                             |
+| CustomerID  | Unique customer identifier                 |
+| Country     | Customer's country                         |
 
-**Tools Used**
+---
 
-**SQL(MySQL)** – Data cleaning, transformation, and analysis
+# 🛠 Tools Used
 
-**Tableau / Visualization tools** – Visual exploration of results
+* **MySQL** – Data cleaning and analysis
+* **SQL** – Data transformation and business queries
+* **Tableau** – Data visualization and dashboard creation
+* **Excel / CSV** – Data storage and preprocessing
 
-**Project Structure**
+---
+
+# 📁 Project Structure
+
 ```
 online_retail_sql_project
 │
@@ -65,77 +86,167 @@ online_retail_sql_project
 │   └── top_10_products_by_country.png
 │
 ├── 5_Dashboard
-│   └── dashboard.twb   
-│   └── dashboard.png
+│   ├── dashboard.twb
+│   ├── dashboard.png
 │   └── README.md
 │
 └── 6_Reports
     └── Business_Insights.docx
-
 ```
 
-**Data Cleaning Steps**
+---
 
-Several preprocessing steps were applied to ensure data quality:
+# 🧹 Data Cleaning Process
 
-Removed cancelled orders (Invoice numbers starting with "C")
+Before performing analysis, several data quality issues were addressed.
 
-Removed rows with missing CustomerID
+### Cleaning Steps
 
-Calculated Total Revenue per transaction
+* Removed **cancelled transactions** (Invoice numbers starting with "C")
+* Removed rows with **missing CustomerID**
+* Removed transactions with **negative quantities or prices**
+* Standardized **date formats**
+* Calculated **Revenue per transaction**
+* Removed **duplicate records**
 
-Standardized date formats for time-based analysis
+These steps ensured that the dataset was **accurate and reliable for analysis**.
 
+---
 
-**Key Analysis Performed**
+# 📈 Key Analyses Performed
 
-**1. Sales Trend Analysis**
+## 1️⃣ Sales Trend Analysis
 
-Analyzed monthly revenue to identify sales patterns and seasonal trends.
+Analyzed monthly revenue to understand sales growth and seasonal trends.
 
-**2. Top Selling Products**
+Example metric:
 
-Identified products with the highest sales volume to understand product demand.
+Revenue = Quantity × UnitPrice
 
-**3. Revenue by Country**
+This helps identify peak sales periods and potential seasonal demand.
 
-Analyzed geographic distribution of sales to identify key markets.
+---
 
-**4. Customer Analysis**
+## 2️⃣ Top Selling Products
 
-Identified top customers based on total purchase value.
+Identified products with the highest:
 
-**5. Product Affinity Analysis**
+* Sales volume
+* Revenue contribution
 
-Used self-joins to identify products frequently purchased together.
+These products represent the **core revenue drivers** of the business.
 
+---
 
-**Key Business Insights**
+## 3️⃣ Revenue by Country
 
-A small group of customers contributes a significant portion of total revenue.
+Examined geographic distribution of revenue to determine key markets.
 
-Certain products consistently outperform others in sales volume.
+This helps businesses identify **high-value regions for marketing and expansion**.
 
-Most revenue originates from a few key countries.
+---
 
-Seasonal patterns indicate higher sales during holiday periods.
+## 4️⃣ Customer Analysis
 
-These insights can help businesses optimize inventory planning, marketing campaigns, and customer retention strategies.
+Identified **top customers based on total spending**.
 
+Understanding customer purchasing behavior helps improve:
 
-**Potential Business Recommendations**
+* Customer retention
+* Loyalty programs
+* Targeted marketing
 
-Introduce loyalty programs for high-value customers.
+---
 
-Bundle frequently purchased products to increase average order value.
+## 5️⃣ Product Affinity Analysis
 
-Focus marketing efforts on high-revenue countries.
+Used **SQL self-joins** to identify products that are frequently purchased together.
 
-Increase inventory for top-performing products.
+This can support:
 
+* Product bundling
+* Cross-selling strategies
+* Recommendation systems
 
+---
 
-**Author**
+# 📊 Visualizations
 
-Pooja Challa
+The analysis results were visualized using **Tableau**.
 
+Key charts include:
+
+* 📈 Monthly Revenue Trend
+* 📊 Revenue by Country
+* 🛒 Top 10 Products by Revenue
+* 👥 Top Customers by Revenue
+* 📅 Daily Sales Trends
+
+Visualization images are stored in:
+
+```
+4_Visualizations
+```
+
+---
+
+# 📊 Dashboard
+
+An interactive Tableau dashboard was created to present the key findings.
+
+The dashboard includes:
+
+* Sales trends over time
+* Geographic revenue distribution
+* Product performance insights
+* Customer spending analysis
+
+Dashboard files are located in:
+
+```
+5_Dashboard
+```
+
+---
+
+# 💡 Key Business Insights
+
+The analysis revealed several important patterns:
+
+* A **small group of customers generates a large share of revenue**
+* A **few products dominate total sales**
+* **Most revenue comes from a limited number of countries**
+* Sales show **seasonal patterns during peak shopping periods**
+
+---
+
+# 📌 Business Recommendations
+
+Based on the insights, the following strategies could improve performance:
+
+* Introduce **loyalty programs** for high-value customers
+* Bundle **frequently purchased products**
+* Focus marketing efforts on **top revenue-generating countries**
+* Increase inventory for **high-performing products**
+* Use sales trends to **forecast demand**
+
+---
+
+# 🎯 Project Highlights
+
+This project demonstrates several core **data analyst skills**:
+
+* SQL data cleaning and transformation
+* Aggregations and business metrics
+* Customer and product analysis
+* Data visualization with Tableau
+* Translating data findings into business insights
+
+---
+
+# 👩‍💻 Author
+
+**Pooja Challa**
+
+Data Analysis Portfolio Project
+Tools: **SQL • Tableau • Excel**
