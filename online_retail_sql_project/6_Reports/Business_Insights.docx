@@ -1,0 +1,72 @@
+Business Insights Report
+
+E-Commerce Sales Analysis
+Project Overview
+This report summarizes the key findings from the E-Commerce Sales Analysis Project, where transactional retail data was analysed using SQL and Tableau to identify sales trends, customer purchasing behaviour, and product performance.
+The dataset contains online retail transactions including invoice details, products sold, quantities, prices, customer IDs, and country information.
+The objective of this analysis was to uncover insights that can help businesses improve sales strategy, customer engagement, and product management.
+________________________________________
+1. Sales Performance Insights
+Overall Revenue
+The dataset analysis shows that the company generated significant revenue from online retail transactions across multiple countries.
+Revenue was calculated using:
+Revenue = Quantity × Unit Price
+This metric allowed us to measure total business performance across transactions.
+________________________________________
+Monthly Revenue Trend
+The monthly sales analysis revealed fluctuations in revenue across different months.
+Key observations:
+• Revenue tends to increase during certain periods, indicating seasonal demand.
+• Sales spikes may align with holiday shopping periods or promotional campaigns.
+• Monitoring monthly trends helps businesses forecast demand and manage inventory effectively.
+________________________________________
+
+
+2. Geographic Sales Distribution
+Revenue by Country
+Sales data shows that revenue is concentrated in a few key countries.
+Key insights:
+• A small number of countries generate the majority of revenue.
+• This suggests strong market penetration in those regions.
+• Businesses can focus marketing efforts on high-performing regions while exploring opportunities in emerging markets.
+________________________________________
+3. Product Performance
+Top Performing Products
+Analysis of product sales revealed that certain products consistently generate higher revenue and sales volume.
+Key insights:
+• A small percentage of products contribute significantly to total revenue.
+• These high-performing products should be prioritized for stock availability and marketing promotions.
+• Understanding product performance helps optimize inventory management.
+________________________________________
+4. Customer Behaviour Analysis
+Top Customers
+Customer analysis showed that some customers contribute significantly more revenue than others.
+Key insights:
+• High-value customers play an important role in total sales.
+• Businesses should consider loyalty programs or personalized marketing strategies for these customers.
+• Identifying repeat customers can help improve customer retention.
+________________________________________
+5. Daily Sales Patterns
+Daily sales analysis highlighted fluctuations in purchasing activity.
+Key insights:
+• Some days show unusually high sales activity.
+• Sales spikes may correspond to promotions or seasonal demand.
+• Monitoring daily sales trends helps businesses respond quickly to market demand.
+________________________________________
+6. Business Recommendations
+Based on the analysis, the following recommendations can help improve business performance:
+• Focus marketing efforts on top-performing countries.
+• Promote high-performing products to increase revenue.
+• Implement loyalty programs for high-value customers.
+• Use historical sales trends for better inventory planning.
+• Monitor daily sales activity to detect unusual patterns.
+________________________________________
+Conclusion
+This project demonstrates how SQL and data visualization tools such as Tableau can be used to transform raw transactional data into meaningful business insights.
+Through data cleaning, aggregation, and visualization, the analysis identified key patterns in sales performance, customer behaviour, and product demand.
+These insights can support data-driven decision making for businesses operating in the e-commerce industry.
+________________________________________
+Author:
+Pooja Challa
+Tools Used: SQL • Tableau • Excel
+
