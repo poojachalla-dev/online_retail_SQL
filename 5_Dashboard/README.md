@@ -93,7 +93,7 @@ This enables **data-driven business decisions**.
 
 ## 🖼️ Dashboard Preview
 
-![Dashboard](dashboard.png)
+![Dashboard](5_Dashboard/Dashboard.PNG)
 
 ---
 
@@ -114,5 +114,6 @@ The objective of this project is to demonstrate **end-to-end data analytics skil
 This project showcases how raw transactional data can be transformed into **actionable business insights** using modern data analytics tools.
 
 ---
+
 
 
