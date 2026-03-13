@@ -207,7 +207,7 @@ Dashboard files are located in:
 5_Dashboard
 ```
 
-![Dashboard](online_retail_SQL_project/5_Dashboard/Dashboard.png)
+![Dashboard](online_retail_sql_project/5_Dashboard/Dashboard.png)
 
 ---
 
