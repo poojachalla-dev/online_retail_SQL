@@ -13,16 +13,14 @@ Revenue was calculated using:
 Revenue = Quantity × Unit Price
 This metric allowed us to measure total business performance across transactions.
 ________________________________________
-Monthly Revenue Trend
+2. Monthly Revenue Trend
 The monthly sales analysis revealed fluctuations in revenue across different months.
 Key observations:
 • Revenue tends to increase during certain periods, indicating seasonal demand.
 • Sales spikes may align with holiday shopping periods or promotional campaigns.
 • Monitoring monthly trends helps businesses forecast demand and manage inventory effectively.
 ________________________________________
-
-
-2. Geographic Sales Distribution
+3. Geographic Sales Distribution
 Revenue by Country
 Sales data shows that revenue is concentrated in a few key countries.
 Key insights:
@@ -30,7 +28,7 @@ Key insights:
 • This suggests strong market penetration in those regions.
 • Businesses can focus marketing efforts on high-performing regions while exploring opportunities in emerging markets.
 ________________________________________
-3. Product Performance
+4. Product Performance
 Top Performing Products
 Analysis of product sales revealed that certain products consistently generate higher revenue and sales volume.
 Key insights:
@@ -38,7 +36,7 @@ Key insights:
 • These high-performing products should be prioritized for stock availability and marketing promotions.
 • Understanding product performance helps optimize inventory management.
 ________________________________________
-4. Customer Behaviour Analysis
+5. Customer Behaviour Analysis
 Top Customers
 Customer analysis showed that some customers contribute significantly more revenue than others.
 Key insights:
@@ -46,14 +44,14 @@ Key insights:
 • Businesses should consider loyalty programs or personalized marketing strategies for these customers.
 • Identifying repeat customers can help improve customer retention.
 ________________________________________
-5. Daily Sales Patterns
+6. Daily Sales Patterns
 Daily sales analysis highlighted fluctuations in purchasing activity.
 Key insights:
 • Some days show unusually high sales activity.
 • Sales spikes may correspond to promotions or seasonal demand.
 • Monitoring daily sales trends helps businesses respond quickly to market demand.
 ________________________________________
-6. Business Recommendations
+7. Business Recommendations
 Based on the analysis, the following recommendations can help improve business performance:
 • Focus marketing efforts on top-performing countries.
 • Promote high-performing products to increase revenue.
@@ -69,4 +67,5 @@ ________________________________________
 Author:
 Pooja Challa
 Tools Used: SQL • Tableau • Excel
+
 
