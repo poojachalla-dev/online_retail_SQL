@@ -1,254 +1,182 @@
-# 🛒 E-Commerce Sales Analysis using SQL
+# 🛒 E-Commerce Sales Analysis using SQL & Tableau
 
-A data analysis project that explores transactional data from an online retail store to uncover insights about **sales performance, customer behavior, and product trends** using **SQL and Tableau**.
+> Analyzing 500,000+ real-world transactions from a UK-based online retailer to uncover revenue trends, top products, customer behavior, and geographic sales patterns.
 
-The dataset contains **500,000+ transactions**, making it suitable for demonstrating real-world data cleaning, analysis, and visualization techniques used by data analysts.
-
----
-
-# 📊 Project Overview
-
-This project analyzes historical e-commerce transaction data to answer key business questions such as:
-
-* What are the **monthly sales trends**?
-* Which **products generate the most revenue**?
-* Which **countries contribute the most sales**?
-* Who are the **top customers**?
-* What patterns exist in **customer purchasing behavior**?
-
-The analysis was performed using **SQL for data cleaning and querying** and **Tableau for visualizations and dashboards**.
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
+![Excel](https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)
+![Dataset](https://img.shields.io/badge/Dataset-500K%2B_Transactions-blue?style=flat-square)
 
 ---
 
-# 📂 Dataset
+## 📌 Project Overview
 
-**Source:** Kaggle – Online Retail Dataset
+This end-to-end data analysis project covers the full analyst workflow:
 
-The dataset contains transaction records from a **UK-based online retailer between 2010 and 2011**.
+**Data Cleaning → SQL Analysis → Tableau Visualization → Business Insights**
 
-### Dataset Features
-
-| Column      | Description                                |
-| ----------- | ------------------------------------------ |
-| InvoiceNo   | Unique invoice number for each transaction |
-| StockCode   | Unique product identifier                  |
-| Description | Product description                        |
-| Quantity    | Number of items purchased                  |
-| InvoiceDate | Date and time of purchase                  |
-| UnitPrice   | Price per unit                             |
-| CustomerID  | Unique customer identifier                 |
-| Country     | Customer's country                         |
+Using transaction data from a real UK-based online retailer (2010–2011), the project demonstrates practical skills in identifying what drives revenue, who the most valuable customers are, and where to focus business strategy.
 
 ---
 
-# 🛠 Tools Used
+## 📂 Dataset
 
-* **MySQL** – Data cleaning and analysis
-* **SQL** – Data transformation and business queries
-* **Tableau** – Data visualization and dashboard creation
-* **Excel / CSV** – Data storage and preprocessing
+**Source:** [Kaggle – Online Retail Dataset](https://www.kaggle.com/datasets/vijayuv/onlineretail)
+
+**Scope:** 500,000+ transactions · UK-based retailer · 2010–2011
+
+| Column | Description |
+|--------|-------------|
+| `InvoiceNo` | Unique invoice number per transaction |
+| `StockCode` | Unique product identifier |
+| `Description` | Product name/description |
+| `Quantity` | Number of items purchased |
+| `InvoiceDate` | Date and time of purchase |
+| `UnitPrice` | Price per unit (£) |
+| `CustomerID` | Unique customer identifier |
+| `Country` | Customer's country |
+
+> **Key derived metric:** `Revenue = Quantity × UnitPrice`
 
 ---
 
-# 📁 Project Structure
+## ❓ Business Questions Answered
+
+1. 📈 What are the monthly and daily sales trends?
+2. 🏆 Which products generate the most revenue and volume?
+3. 🌍 Which countries contribute the most sales?
+4. 👥 Who are the top customers by total spending?
+5. 🛍️ Which products are frequently bought together?
+6. 📅 Are there seasonal patterns in purchasing behavior?
+
+---
+
+## 🧹 Data Cleaning Steps
+
+Raw data had several quality issues — all resolved before analysis:
+
+| Issue | Fix Applied |
+|-------|-------------|
+| Cancelled transactions | Removed invoices starting with `"C"` |
+| Missing CustomerID | Dropped rows with null customer identifiers |
+| Negative quantities / prices | Filtered out invalid transaction records |
+| Inconsistent date formats | Standardized to `YYYY-MM-DD HH:MM:SS` |
+| Duplicate records | Deduplicated using invoice + stockcode |
+| Missing revenue column | Computed `Revenue = Quantity × UnitPrice` |
+
+Cleaned dataset saved as `online_retail_cleaned.csv`.
+
+---
+
+## 📁 Repository Structure
 
 ```
-online_retail_SQL
+online_retail_SQL/
 │
-├── 1_Data
-│   ├── online_retail.csv
-│   └── online_retail_cleaned.csv
+├── 1_Data/
+│   ├── online_retail.csv               # Raw dataset
+│   └── online_retail_cleaned.csv       # Cleaned dataset
 │
-├── 2_SQL
+├── 2_SQL/
 │   ├── 01_create_database_and_table.sql
 │   ├── 02_data_cleaning.sql
 │   ├── 03_sales_analysis.sql
 │   ├── 04_customer_analysis.sql
 │   ├── 05_product_performance.sql
-│   ├── 06_advanced_analysis.sql
-│   └── README.md
+│   └── 06_advanced_analysis.sql
 │
-├── 3_Tableau
+├── 3_Tableau/
 │   ├── revenue_by_country.twb
 │   ├── monthly_revenue_trend.twb
-│   ├── daily_revenue_trend.twb
-│   ├── products_sold_in_most_countries.twb
 │   ├── top_10_products_by_country.twb
-│   ├── total_customers.twb
-│   ├── total_orders.twb
-│   └── total_revenue.twb
+│   └── ...
 │
-├── 4_Visualizations
-│   ├── daily_revenue_trend.png
+├── 4_Visualizations/
 │   ├── monthly_revenue_trend.png
-│   ├── products_sold_in_most_countries.png
 │   ├── revenue_by_country.png
-│   └── top_10_products_by_country.png
+│   ├── top_10_products_by_country.png
+│   └── ...
 │
-├── 5_Dashboard
+├── 5_Dashboard/
 │   ├── dashboard.twb
-│   ├── dashboard.png
-│   └── README.md
+│   └── dashboard.png
 │
-└── 6_Reports
+└── 6_Reports/
     └── Business_Insights.docx
 ```
 
 ---
 
-# 🧹 Data Cleaning Process
+## ▶️ How to Run the Queries
 
-Before performing analysis, several data quality issues were addressed.
+### Prerequisites
+- MySQL 8.0+ (or any MySQL-compatible client)
+- The raw dataset downloaded from [Kaggle](https://www.kaggle.com/datasets/vijayuv/onlineretail)
 
-### Cleaning Steps
+### Steps
 
-* Removed **cancelled transactions** (Invoice numbers starting with "C")
-* Removed rows with **missing CustomerID**
-* Removed transactions with **negative quantities or prices**
-* Standardized **date formats**
-* Calculated **Revenue per transaction**
-* Removed **duplicate records**
-
-These steps ensured that the dataset was **accurate and reliable for analysis**.
-
----
-
-# 📈 Key Analyses Performed
-
-## 1️⃣ Sales Trend Analysis
-
-Analyzed monthly revenue to understand sales growth and seasonal trends.
-
-Example metric:
-
-Revenue = Quantity × UnitPrice
-
-This helps identify peak sales periods and potential seasonal demand.
-
----
-
-## 2️⃣ Top Selling Products
-
-Identified products with the highest:
-
-* Sales volume
-* Revenue contribution
-
-These products represent the **core revenue drivers** of the business.
-
----
-
-## 3️⃣ Revenue by Country
-
-Examined geographic distribution of revenue to determine key markets.
-
-This helps businesses identify **high-value regions for marketing and expansion**.
-
----
-
-## 4️⃣ Customer Analysis
-
-Identified **top customers based on total spending**.
-
-Understanding customer purchasing behavior helps improve:
-
-* Customer retention
-* Loyalty programs
-* Targeted marketing
-
----
-
-## 5️⃣ Product Affinity Analysis
-
-Used **SQL self-joins** to identify products that are frequently purchased together.
-
-This can support:
-
-* Product bundling
-* Cross-selling strategies
-* Recommendation systems
-
----
-
-# 📊 Visualizations
-
-The analysis results were visualized using **Tableau**.
-
-Key charts include:
-
-* 📈 Monthly Revenue Trend
-* 📊 Revenue by Country
-* 🛒 Top 10 Products by Revenue
-* 👥 Top Customers by Revenue
-* 📅 Daily Sales Trends
-
-Visualization images are stored in:
-
-```
-4_Visualizations
+**1. Set up the database**
+```sql
+-- Run first
+SOURCE 2_SQL/01_create_database_and_table.sql;
 ```
 
----
-
-# 📊 Dashboard
-
-An interactive Tableau dashboard was created to present the key findings.
-
-The dashboard includes:
-
-* Sales trends over time
-* Geographic revenue distribution
-* Product performance insights
-* Customer spending analysis
-
-Dashboard files are located in:
-
-```
-5_Dashboard
+**2. Load and clean the data**
+```sql
+-- Import online_retail.csv into the table, then:
+SOURCE 2_SQL/02_data_cleaning.sql;
 ```
 
-![Dashboard](5_Dashboard/Dashboard.PNG)
+**3. Run the analyses in order**
+```sql
+SOURCE 2_SQL/03_sales_analysis.sql;       -- Monthly & daily revenue trends
+SOURCE 2_SQL/04_customer_analysis.sql;    -- Top customers by spend
+SOURCE 2_SQL/05_product_performance.sql;  -- Top products by revenue & volume
+SOURCE 2_SQL/06_advanced_analysis.sql;    -- Product affinity / co-purchase analysis
+```
+
+**4. Explore the dashboards**
+
+Open any `.twb` file in **Tableau Desktop** or view static charts in `4_Visualizations/`.
 
 ---
 
-# 💡 Key Business Insights
+## 💡 Key Findings
 
-The analysis revealed several important patterns:
-
-* A **small group of customers generates a large share of revenue**
-* A **few products dominate total sales**
-* **Most revenue comes from a limited number of countries**
-* Sales show **seasonal patterns during peak shopping periods**
-
----
-
-# 📌 Business Recommendations
-
-Based on the insights, the following strategies could improve performance:
-
-* Introduce **loyalty programs** for high-value customers
-* Bundle **frequently purchased products**
-* Focus marketing efforts on **top revenue-generating countries**
-* Increase inventory for **high-performing products**
-* Use sales trends to **forecast demand**
+| Finding | Insight |
+|---------|---------|
+| 📦 **Top products dominate** | A small set of SKUs account for a disproportionately large share of revenue |
+| 👑 **High-value customers** | A minority of customers drive the majority of total sales (Pareto effect) |
+| 🌍 **UK leads revenue** | The United Kingdom is the single largest market by a wide margin |
+| 📅 **Q4 seasonality** | Sales spike significantly in October–November, indicating holiday demand |
+| 🛍️ **Product affinity** | Several product pairs are frequently bought together — ideal for bundling |
 
 ---
 
-# 🎯 Project Highlights
+## 📊 Dashboard Preview
 
-This project demonstrates several core **data analyst skills**:
+> Interactive dashboard built in Tableau covering sales trends, geographic distribution, product performance, and customer spend.
 
-* SQL data cleaning and transformation
-* Aggregations and business metrics
-* Customer and product analysis
-* Data visualization with Tableau
-* Translating data findings into business insights
+![Dashboard](5_Dashboard/dashboard.png)
 
 ---
 
-# 👩‍💻 Author
+## 📌 Business Recommendations
 
-**Pooja Challa**
+Based on the analysis:
 
-Data Analysis Portfolio Project
-Tools: **SQL • Tableau • Excel**
+- 🎯 **Loyalty programs** — reward the top customer segment driving most revenue
+- 📦 **Product bundling** — package frequently co-purchased items together
+- 🌍 **Geographic focus** — double down on marketing in the UK and top-performing countries
+- 📈 **Inventory planning** — stock up high-performing SKUs ahead of Q4
+- 🔮 **Demand forecasting** — use seasonal trends to anticipate peaks and reduce stockouts
+
+---
+
+## 👩‍💻 Author
+
+**Pooja Challa** — Data Analyst · SQL · Tableau · Python
+
+[![GitHub](https://img.shields.io/badge/GitHub-poojachalla--dev-181717?style=flat-square&logo=github)](https://github.com/poojachalla-dev)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-poojachalla-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/poojachalla)
