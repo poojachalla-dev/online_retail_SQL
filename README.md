@@ -158,7 +158,7 @@ Open any `.twb` file in **Tableau Desktop** or view static charts in `4_Visualiz
 
 > Interactive dashboard built in Tableau covering sales trends, geographic distribution, product performance, and customer spend.
 
-![Dashboard](Dashboard.PNG)
+![Dashboard](5_Dashboard/Dashboard.PNG)
 
 ---
 
